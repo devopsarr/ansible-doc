@@ -1,0 +1,19 @@
+collections:
+  - name: devopsarr.sonarr
+    version: 0.5.0
+    type: galaxy
+  - name: devopsarr.radarr
+    version: 0.1.0
+    type: galaxy
+  - name: devopsarr.lidarr
+    version: 0.1.0
+    type: galaxy
+  - name: devopsarr.readarr
+    version: 0.1.0
+    type: galaxy
+  - name: devopsarr.whisparr
+    version: 0.1.0
+    type: galaxy
+  - name: devopsarr.prowlarr
+    version: 0.1.0
+    type: galaxy

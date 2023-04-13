@@ -1,0 +1,64 @@
+name: doc-generation
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DevOpsArrBOT token
+        id: DevOpsArrBOT
+        uses: getsentry/action-github-app-token@v2
+        with:
+          app_id: '305652'
+          private_key: ${{ secrets.DEVOPSARRBOT_PRIVATE_KEY }}
+
+      - name: set DevOpsArrBOT config
+        run: |
+          git config --global user.name "devopsarr[bot]"
+          git config --global user.email 127950054+devopsarr[bot]@users.noreply.github.com
+
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          token: ${{ steps.DevOpsArrBOT.outputs.token }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install ansible-base stable-2.14
+        run: pip install https://github.com/ansible/ansible/archive/stable-2.14.tar.gz --disable-pip-version-check
+
+      - name: Install antsibull-docs
+        run: pip install antsibull-docs
+      
+      - name: Install collections
+        run: ansible-galaxy install -r requirements.yml
+      
+      - name: Generate doc
+        run: |
+          mkdir build
+          antsibull-docs sphinx-init --use-current --dest-dir ./build devopsarr.sonarr devopsarr.radarr devopsarr.lidarr devopsarr.readarr devopsarr.whisparr devopsarr.prowlarr
+          cd ./build && pip install -r requirements.txt && ./build.sh
+
+      - name: diff
+        id: diff
+        run: |
+          cp -r ./build/build/html/* ./
+          git diff --exit-code ||\
+          echo "create-commit=true" >> $GITHUB_OUTPUT
+
+      - name: Commit doc
+        if: ${{ steps.diff.outputs.create-commit == 'true'}}
+        run: |
+          git add .
+          git commit -m "feat: first pages"
+          git push origin ${{ github.head_ref }}
+        env:
+          GITHUB_TOKEN: ${{ steps.DevOpsArrBOT.outputs.token }}
