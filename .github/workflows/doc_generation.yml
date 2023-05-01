@@ -58,7 +58,7 @@ jobs:
         if: ${{ steps.diff.outputs.create-commit == 'true'}}
         run: |
           git add .
-          git commit -m "feat: first pages"
-          git push origin ${{ github.head_ref }}
+          git commit --amend --no-edit
+          git push -f origin ${{ github.head_ref }}
         env:
           GITHUB_TOKEN: ${{ steps.DevOpsArrBOT.outputs.token }}
