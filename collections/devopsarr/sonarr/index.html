@@ -14,12 +14,14 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="devopsarr.sonarr.sonarr_delay_profile module – Manages Sonarr delay profile." href="sonarr_delay_profile_module.html" />
+    <link rel="next" title="devopsarr.sonarr.sonarr_auto_tag module – Manages Sonarr auto tag." href="sonarr_auto_tag_module.html" />
     <link rel="prev" title="devopsarr.readarr.readarr_tag module – Manages Readarr tag." href="../readarr/readarr_tag_module.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
 
 
@@ -130,8 +132,8 @@
            <div itemprop="articleBody">
              
   <section id="devopsarr-sonarr">
-<span id="plugins-in-devopsarr-sonarr"></span><h1>Devopsarr.Sonarr<a class="headerlink" href="#devopsarr-sonarr" title="Permalink to this heading"></a></h1>
-<p>Collection version 0.6.0</p>
+<span id="plugins-in-devopsarr-sonarr"></span><h1>Devopsarr.Sonarr<a class="headerlink" href="#devopsarr-sonarr" title="Link to this heading"></a></h1>
+<p>Collection version 1.0.0</p>
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
@@ -140,7 +142,7 @@
 </ul>
 </nav>
 <section id="description">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p>Ansible collection for Sonarr</p>
 <p><strong>Author:</strong></p>
 <ul class="simple">
@@ -156,7 +158,7 @@
   <a href="https://github.com/devopsarr/ansible-collection-sonarr/issues/new/choose" aria-role="button" target="_blank" rel="noopener external">Report an issue</a>
 </p></section>
 <section id="communication">
-<span id="communication-for-devopsarr-sonarr"></span><h2><a class="toc-backref" href="#id2" role="doc-backlink">Communication</a><a class="headerlink" href="#communication" title="Permalink to this heading"></a></h2>
+<span id="communication-for-devopsarr-sonarr"></span><h2><a class="toc-backref" href="#id2" role="doc-backlink">Communication</a><a class="headerlink" href="#communication" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Matrix room <code class="docutils literal notranslate"><span class="pre">#users:ansible.im</span></code>: <a class="reference external" href="https://matrix.to/#/#users:ansible.im">General usage and support questions</a>.</p></li>
 <li><p>IRC channel <code class="docutils literal notranslate"><span class="pre">#ansible</span></code> (Libera network):
@@ -168,54 +170,45 @@
 </div>
 </section>
 <section id="plugin-index">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Plugin Index</a><a class="headerlink" href="#plugin-index" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Plugin Index</a><a class="headerlink" href="#plugin-index" title="Link to this heading"></a></h2>
 <p>These are the plugins in the devopsarr.sonarr collection:</p>
 <section id="modules">
-<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this heading"></a></h3>
+<h3>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h3>
 <ul class="simple">
+<li><p><a class="reference internal" href="sonarr_auto_tag_module.html#ansible-collections-devopsarr-sonarr-sonarr-auto-tag-module"><span class="std std-ref">sonarr_auto_tag module</span></a> – Manages Sonarr auto tag.</p></li>
+<li><p><a class="reference internal" href="sonarr_auto_tag_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-auto-tag-info-module"><span class="std std-ref">sonarr_auto_tag_info module</span></a> – Get information about Sonarr auto tag.</p></li>
+<li><p><a class="reference internal" href="sonarr_auto_tag_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-auto-tag-schema-info-module"><span class="std std-ref">sonarr_auto_tag_schema_info module</span></a> – Get information about Sonarr auto tag schema.</p></li>
+<li><p><a class="reference internal" href="sonarr_custom_format_module.html#ansible-collections-devopsarr-sonarr-sonarr-custom-format-module"><span class="std std-ref">sonarr_custom_format module</span></a> – Manages Sonarr custom format.</p></li>
+<li><p><a class="reference internal" href="sonarr_custom_format_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-custom-format-info-module"><span class="std std-ref">sonarr_custom_format_info module</span></a> – Get information about Sonarr custom format.</p></li>
+<li><p><a class="reference internal" href="sonarr_custom_format_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-custom-format-schema-info-module"><span class="std std-ref">sonarr_custom_format_schema_info module</span></a> – Get information about Sonarr custom format schema.</p></li>
 <li><p><a class="reference internal" href="sonarr_delay_profile_module.html#ansible-collections-devopsarr-sonarr-sonarr-delay-profile-module"><span class="std std-ref">sonarr_delay_profile module</span></a> – Manages Sonarr delay profile.</p></li>
 <li><p><a class="reference internal" href="sonarr_delay_profile_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-delay-profile-info-module"><span class="std std-ref">sonarr_delay_profile_info module</span></a> – Get information about Sonarr delay profile.</p></li>
 <li><p><a class="reference internal" href="sonarr_download_client_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-module"><span class="std std-ref">sonarr_download_client module</span></a> – Manages Sonarr download client.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_aria2_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-aria2-module"><span class="std std-ref">sonarr_download_client_aria2 module</span></a> – Manages Sonarr download client Aria2.</p></li>
 <li><p><a class="reference internal" href="sonarr_download_client_config_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-config-module"><span class="std std-ref">sonarr_download_client_config module</span></a> – Manages Sonarr download client config.</p></li>
 <li><p><a class="reference internal" href="sonarr_download_client_config_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-config-info-module"><span class="std std-ref">sonarr_download_client_config_info module</span></a> – Get information about Sonarr download client config.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_deluge_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-deluge-module"><span class="std std-ref">sonarr_download_client_deluge module</span></a> – Manages Sonarr download client Deluge.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_flood_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-flood-module"><span class="std std-ref">sonarr_download_client_flood module</span></a> – Manages Sonarr download client Flood.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_freebox_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-freebox-module"><span class="std std-ref">sonarr_download_client_freebox module</span></a> – Manages Sonarr download client Freebox.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_hadouken_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-hadouken-module"><span class="std std-ref">sonarr_download_client_hadouken module</span></a> – Manages Sonarr download client Hadouken.</p></li>
 <li><p><a class="reference internal" href="sonarr_download_client_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-info-module"><span class="std std-ref">sonarr_download_client_info module</span></a> – Get information about Sonarr download client.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_nzbget_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-nzbget-module"><span class="std std-ref">sonarr_download_client_nzbget module</span></a> – Manages Sonarr download client NZBget.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_nzbvortex_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-nzbvortex-module"><span class="std std-ref">sonarr_download_client_nzbvortex module</span></a> – Manages Sonarr download client NZBVortex.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_pneumatic_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-pneumatic-module"><span class="std std-ref">sonarr_download_client_pneumatic module</span></a> – Manages Sonarr download client Pneumatic.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_qbittorrent_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-qbittorrent-module"><span class="std std-ref">sonarr_download_client_qbittorrent module</span></a> – Manages Sonarr download client qBittorrent.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_rtorrent_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-rtorrent-module"><span class="std std-ref">sonarr_download_client_rtorrent module</span></a> – Manages Sonarr download client Rtorrent.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_sabnzbd_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-sabnzbd-module"><span class="std std-ref">sonarr_download_client_sabnzbd module</span></a> – Manages Sonarr download client SABnzbdd.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_torrent_blackhole_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-torrent-blackhole-module"><span class="std std-ref">sonarr_download_client_torrent_blackhole module</span></a> – Manages Sonarr download client Torrent Blackhole.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_torrent_download_station_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-torrent-download-station-module"><span class="std std-ref">sonarr_download_client_torrent_download_station module</span></a> – Manages Sonarr download client Download Station.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_transmission_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-transmission-module"><span class="std std-ref">sonarr_download_client_transmission module</span></a> – Manages Sonarr download client Transmission.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_usenet_blackhole_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-usenet-blackhole-module"><span class="std std-ref">sonarr_download_client_usenet_blackhole module</span></a> – Manages Sonarr download client Usenet Blackhole.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_usenet_download_station_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-usenet-download-station-module"><span class="std std-ref">sonarr_download_client_usenet_download_station module</span></a> – Manages Sonarr download client Download Station.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_utorrent_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-utorrent-module"><span class="std std-ref">sonarr_download_client_utorrent module</span></a> – Manages Sonarr download client uTorrent.</p></li>
-<li><p><a class="reference internal" href="sonarr_download_client_vuze_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-vuze-module"><span class="std std-ref">sonarr_download_client_vuze module</span></a> – Manages Sonarr download client Vuze.</p></li>
+<li><p><a class="reference internal" href="sonarr_download_client_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-download-client-schema-info-module"><span class="std std-ref">sonarr_download_client_schema_info module</span></a> – Get information about Sonarr download client schema.</p></li>
+<li><p><a class="reference internal" href="sonarr_import_list_module.html#ansible-collections-devopsarr-sonarr-sonarr-import-list-module"><span class="std std-ref">sonarr_import_list module</span></a> – Manages Sonarr import list.</p></li>
+<li><p><a class="reference internal" href="sonarr_import_list_exclusion_module.html#ansible-collections-devopsarr-sonarr-sonarr-import-list-exclusion-module"><span class="std std-ref">sonarr_import_list_exclusion module</span></a> – Manages Sonarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="sonarr_import_list_exclusion_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-import-list-exclusion-info-module"><span class="std std-ref">sonarr_import_list_exclusion_info module</span></a> – Manages Sonarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="sonarr_import_list_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-import-list-info-module"><span class="std std-ref">sonarr_import_list_info module</span></a> – Get information about Sonarr import list.</p></li>
+<li><p><a class="reference internal" href="sonarr_import_list_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-import-list-schema-info-module"><span class="std std-ref">sonarr_import_list_schema_info module</span></a> – Get information about Sonarr import list schema.</p></li>
 <li><p><a class="reference internal" href="sonarr_indexer_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-module"><span class="std std-ref">sonarr_indexer module</span></a> – Manages Sonarr indexer.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_broadcasthenet_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-broadcasthenet-module"><span class="std std-ref">sonarr_indexer_broadcasthenet module</span></a> – Manages Sonarr indexer BroadcastheNet.</p></li>
 <li><p><a class="reference internal" href="sonarr_indexer_config_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-config-module"><span class="std std-ref">sonarr_indexer_config module</span></a> – Manages Sonarr indexer config.</p></li>
 <li><p><a class="reference internal" href="sonarr_indexer_config_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-config-info-module"><span class="std std-ref">sonarr_indexer_config_info module</span></a> – Get information about Sonarr indexer config.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_fanzub_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-fanzub-module"><span class="std std-ref">sonarr_indexer_fanzub module</span></a> – Manages Sonarr indexer Fanzub.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_filelist_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-filelist-module"><span class="std std-ref">sonarr_indexer_filelist module</span></a> – Manages Sonarr indexer Filelist.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_hdbits_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-hdbits-module"><span class="std std-ref">sonarr_indexer_hdbits module</span></a> – Manages Sonarr indexer HDbits.</p></li>
 <li><p><a class="reference internal" href="sonarr_indexer_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-info-module"><span class="std std-ref">sonarr_indexer_info module</span></a> – Get information about Sonarr indexer.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_iptorrents_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-iptorrents-module"><span class="std std-ref">sonarr_indexer_iptorrents module</span></a> – Manages Sonarr indexer IP Torrents.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_newznab_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-newznab-module"><span class="std std-ref">sonarr_indexer_newznab module</span></a> – Manages Sonarr indexer Newznab.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_nyaa_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-nyaa-module"><span class="std std-ref">sonarr_indexer_nyaa module</span></a> – Manages Sonarr indexer Nyaa.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_rarbg_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-rarbg-module"><span class="std std-ref">sonarr_indexer_rarbg module</span></a> – Manages Sonarr indexer Rarbg.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_torrent_rss_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-torrent-rss-module"><span class="std std-ref">sonarr_indexer_torrent_rss module</span></a> – Manages Sonarr indexer Torrent RSS.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_torrentleech_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-torrentleech-module"><span class="std std-ref">sonarr_indexer_torrentleech module</span></a> – Manages Sonarr indexer Torrentleech.</p></li>
-<li><p><a class="reference internal" href="sonarr_indexer_torznab_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-torznab-module"><span class="std std-ref">sonarr_indexer_torznab module</span></a> – Manages Sonarr indexer.</p></li>
+<li><p><a class="reference internal" href="sonarr_indexer_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-indexer-schema-info-module"><span class="std std-ref">sonarr_indexer_schema_info module</span></a> – Get information about Sonarr indexer schema.</p></li>
+<li><p><a class="reference internal" href="sonarr_language_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-language-info-module"><span class="std std-ref">sonarr_language_info module</span></a> – Get information about Sonarr language.</p></li>
 <li><p><a class="reference internal" href="sonarr_media_management_module.html#ansible-collections-devopsarr-sonarr-sonarr-media-management-module"><span class="std std-ref">sonarr_media_management module</span></a> – Manages Sonarr media management.</p></li>
 <li><p><a class="reference internal" href="sonarr_media_management_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-media-management-info-module"><span class="std std-ref">sonarr_media_management_info module</span></a> – Get information about Sonarr media management.</p></li>
+<li><p><a class="reference internal" href="sonarr_metadata_module.html#ansible-collections-devopsarr-sonarr-sonarr-metadata-module"><span class="std std-ref">sonarr_metadata module</span></a> – Manages Sonarr metadata.</p></li>
+<li><p><a class="reference internal" href="sonarr_metadata_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-metadata-info-module"><span class="std std-ref">sonarr_metadata_info module</span></a> – Get information about Sonarr metadata.</p></li>
+<li><p><a class="reference internal" href="sonarr_metadata_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-metadata-schema-info-module"><span class="std std-ref">sonarr_metadata_schema_info module</span></a> – Get information about Sonarr metadata schema.</p></li>
 <li><p><a class="reference internal" href="sonarr_naming_module.html#ansible-collections-devopsarr-sonarr-sonarr-naming-module"><span class="std std-ref">sonarr_naming module</span></a> – Manages Sonarr naming.</p></li>
 <li><p><a class="reference internal" href="sonarr_naming_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-naming-info-module"><span class="std std-ref">sonarr_naming_info module</span></a> – Get information about Sonarr naming.</p></li>
+<li><p><a class="reference internal" href="sonarr_notification_module.html#ansible-collections-devopsarr-sonarr-sonarr-notification-module"><span class="std std-ref">sonarr_notification module</span></a> – Manages Sonarr notification.</p></li>
+<li><p><a class="reference internal" href="sonarr_notification_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-notification-info-module"><span class="std std-ref">sonarr_notification_info module</span></a> – Get information about Sonarr notification.</p></li>
+<li><p><a class="reference internal" href="sonarr_notification_schema_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-notification-schema-info-module"><span class="std std-ref">sonarr_notification_schema_info module</span></a> – Get information about Sonarr notification schema.</p></li>
 <li><p><a class="reference internal" href="sonarr_quality_module.html#ansible-collections-devopsarr-sonarr-sonarr-quality-module"><span class="std std-ref">sonarr_quality module</span></a> – Manages Sonarr quality.</p></li>
 <li><p><a class="reference internal" href="sonarr_quality_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-quality-info-module"><span class="std std-ref">sonarr_quality_info module</span></a> – Get information about Sonarr quality.</p></li>
 <li><p><a class="reference internal" href="sonarr_quality_profile_module.html#ansible-collections-devopsarr-sonarr-sonarr-quality-profile-module"><span class="std std-ref">sonarr_quality_profile module</span></a> – Manages Sonarr quality profile.</p></li>
@@ -226,6 +219,8 @@
 <li><p><a class="reference internal" href="sonarr_remote_path_mapping_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-remote-path-mapping-info-module"><span class="std std-ref">sonarr_remote_path_mapping_info module</span></a> – Get information about Sonarr remote path mapping.</p></li>
 <li><p><a class="reference internal" href="sonarr_root_folder_module.html#ansible-collections-devopsarr-sonarr-sonarr-root-folder-module"><span class="std std-ref">sonarr_root_folder module</span></a> – Manages Sonarr root folder.</p></li>
 <li><p><a class="reference internal" href="sonarr_root_folder_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-root-folder-info-module"><span class="std std-ref">sonarr_root_folder_info module</span></a> – Get information about Sonarr root folder.</p></li>
+<li><p><a class="reference internal" href="sonarr_series_module.html#ansible-collections-devopsarr-sonarr-sonarr-series-module"><span class="std std-ref">sonarr_series module</span></a> – Manages Sonarr series.</p></li>
+<li><p><a class="reference internal" href="sonarr_series_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-series-info-module"><span class="std std-ref">sonarr_series_info module</span></a> – Get information about Sonarr series.</p></li>
 <li><p><a class="reference internal" href="sonarr_system_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-system-info-module"><span class="std std-ref">sonarr_system_info module</span></a> – Sonarr system info module</p></li>
 <li><p><a class="reference internal" href="sonarr_tag_module.html#ansible-collections-devopsarr-sonarr-sonarr-tag-module"><span class="std std-ref">sonarr_tag module</span></a> – Manages Sonarr tag.</p></li>
 <li><p><a class="reference internal" href="sonarr_tag_info_module.html#ansible-collections-devopsarr-sonarr-sonarr-tag-info-module"><span class="std std-ref">sonarr_tag_info module</span></a> – Get information about Sonarr tag.</p></li>
@@ -247,7 +242,7 @@
 
 <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../readarr/readarr_tag_module.html" class="btn btn-neutral float-left" title="devopsarr.readarr.readarr_tag module – Manages Readarr tag." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="sonarr_delay_profile_module.html" class="btn btn-neutral float-right" title="devopsarr.sonarr.sonarr_delay_profile module – Manages Sonarr delay profile." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sonarr_auto_tag_module.html" class="btn btn-neutral float-right" title="devopsarr.sonarr.sonarr_auto_tag module – Manages Sonarr auto tag." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

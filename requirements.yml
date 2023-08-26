@@ -1,6 +1,6 @@
 collections:
   - name: devopsarr.sonarr
-    version: 0.6.0
+    version: 1.0.0
     type: galaxy
   - name: devopsarr.radarr
     version: 0.1.0
