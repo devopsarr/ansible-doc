@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="2.5.0" name="antsibull-docs" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>devopsarr.radarr.radarr_media_management module – Manages Radarr media management. &mdash; Ansible collections  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5707b69d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ansible.css?v=c5b67dd2" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/antsibull-minimal.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/rtd-ethical-ads.css?v=289b023e" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/images/Ansible-Mark-RGB_Black.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=7f41d439"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="devopsarr.radarr.radarr_media_management_info module – Get information about Radarr media management." href="radarr_media_management_info_module.html" />
+    <link rel="prev" title="devopsarr.radarr.radarr_language_info module – Get information about Radarr language." href="radarr_language_info_module.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
+
+
+
+
+</head>
+
+<body class="wy-body-for-nav"><!-- extra body elements for Ansible beyond RTD Sphinx Theme -->
+
+<div class="DocSite-globalNav ansibleNav">
+  <ul>
+    <li><a href="https://www.ansible.com/blog" target="_blank">Blog</a></li>
+    <li><a href="https://forum.ansible.com/" target="_blank">Ansible community forum</a></li>
+    <li><a href="https://docs.ansible.com/" target="_blank">Documentation</a></li>
+  </ul>
+</div>
+
+<a class="DocSite-nav" href="/" style="padding-bottom: 30px;">
+
+  <img class="DocSiteNav-logo"
+    src="../../../_static/images/Ansible-Mark-RGB_White.png"
+    alt="Ansible Logo">
+  <div class="DocSiteNav-title">Ansible Collections Documentation</div>
+</a>
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Ansible collections
+          </a><!--- Based on https://github.com/rtfd/sphinx_rtd_theme/pull/438/files -->
+
+<div class="version">
+  
+    
+  
+</div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <label class="sr-only" for="q">Search docs:</label>
+    <input type="text" class="st-default-search-input" id="q" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+  
+              <p class="caption" role="heading"><span class="caption-text">Collections:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Collection Index</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Collections in the Devopsarr Namespace</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../lidarr/index.html">Devopsarr.Lidarr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../prowlarr/index.html">Devopsarr.Prowlarr</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Devopsarr.Radarr</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#communication">Communication</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#plugin-index">Plugin Index</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../readarr/index.html">Devopsarr.Readarr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sonarr/index.html">Devopsarr.Sonarr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../whisparr/index.html">Devopsarr.Whisparr</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Plugin indexes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index_module.html">Index of all Modules</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference indexes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../environment_variables.html">Index of all Collection Environment Variables</a></li>
+</ul>
+<!-- extra nav elements for Ansible beyond RTD Sphinx Theme -->
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Ansible collections</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Collection Index</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Collections in the Devopsarr Namespace</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Devopsarr.Radarr</a></li>
+      <li class="breadcrumb-item active">devopsarr.radarr.radarr_media_management module – Manages Radarr media management.</li>
+      <li class="wy-breadcrumbs-aside">
+              <!-- User defined GitHub URL -->
+              <a href="https://github.com/devopsarr/ansible-collection-radarr/edit/main/plugins/modules/radarr_media_management.py?description=%23%23%23%23%23%20SUMMARY%0A%3C!—%20Your%20description%20here%20–%3E%0A%0A%0A%23%23%23%23%23%20ISSUE%20TYPE%0A-%20Docs%20Pull%20Request%0A%0A%2Blabel:%20docsite_pr" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+  
+           <div itemprop="articleBody">
+             
+  <span class="target" id="ansible-collections-devopsarr-radarr-radarr-media-management-module"></span><section id="devopsarr-radarr-radarr-media-management-module-manages-radarr-media-management">
+<h1>devopsarr.radarr.radarr_media_management module – Manages Radarr media management.<a class="headerlink" href="#devopsarr-radarr-radarr-media-management-module-manages-radarr-media-management" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/radarr/">devopsarr.radarr collection</a> (version 1.0.0).</p>
+<p>It is not included in <code class="docutils literal notranslate"><span class="pre">ansible-core</span></code>.
+To check whether it is installed, run <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">list</span></code>.</p>
+<p>To install it, use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">devopsarr.radarr</span></code>.</p>
+<p>To use it in a playbook, specify: <code class="code docutils literal notranslate"><span class="pre">devopsarr.radarr.radarr_media_management</span></code>.</p>
+</div>
+<p class="ansible-version-added">New in devopsarr.radarr 1.0.0</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id3">Notes</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id4">Examples</a></p></li>
+<li><p><a class="reference internal" href="#return-values" id="id5">Return Values</a></p></li>
+</ul>
+</nav>
+<section id="synopsis">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Synopsis</a><a class="headerlink" href="#synopsis" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Manages Radarr media management.</p></li>
+</ul>
+</section>
+<section id="parameters">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Parameters</a><a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<table class="longtable ansible-option-table docutils align-default" style="width: 100%">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Comments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-auto_rename_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-auto-rename-folders"><strong>auto_rename_folders</strong></p>
+<a class="ansibleOptionLink" href="#parameter-auto_rename_folders" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto rename folders.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-auto_unmonitor_previously_downloaded_movies"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-auto-unmonitor-previously-downloaded-movies"><strong>auto_unmonitor_previously_downloaded_movies</strong></p>
+<a class="ansibleOptionLink" href="#parameter-auto_unmonitor_previously_downloaded_movies" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto unmonitor previously downloaded movies.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-chmod_folder"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-chmod-folder"><strong>chmod_folder</strong></p>
+<a class="ansibleOptionLink" href="#parameter-chmod_folder" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Permission in linux format.</p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-chown_group"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-chown-group"><strong>chown_group</strong></p>
+<a class="ansibleOptionLink" href="#parameter-chown_group" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Linux group.</p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-copy_using_hardlinks"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-copy-using-hardlinks"><strong>copy_using_hardlinks</strong></p>
+<a class="ansibleOptionLink" href="#parameter-copy_using_hardlinks" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Copy using hardlinks.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-create_empty_movie_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-create-empty-movie-folders"><strong>create_empty_movie_folders</strong></p>
+<a class="ansibleOptionLink" href="#parameter-create_empty_movie_folders" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Create empty movie folder.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-delete_empty_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-delete-empty-folders"><strong>delete_empty_folders</strong></p>
+<a class="ansibleOptionLink" href="#parameter-delete_empty_folders" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Delete empty folders.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-download_propers_and_repacks"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-download-propers-and-repacks"><strong>download_propers_and_repacks</strong></p>
+<a class="ansibleOptionLink" href="#parameter-download_propers_and_repacks" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Download propers and repack.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;preferAndUpgrade&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;doNotUpgrade&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;doNotPrefer&quot;</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-enable_media_info"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-enable-media-info"><strong>enable_media_info</strong></p>
+<a class="ansibleOptionLink" href="#parameter-enable_media_info" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Enable media info flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-extra_file_extensions"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-extra-file-extensions"><strong>extra_file_extensions</strong></p>
+<a class="ansibleOptionLink" href="#parameter-extra_file_extensions" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Comma separated list of extra files extension to be imported.</p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-file_date"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-file-date"><strong>file_date</strong></p>
+<a class="ansibleOptionLink" href="#parameter-file_date" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>File date modification.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;none&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;cinemas&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;release&quot;</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-import_extra_files"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-import-extra-files"><strong>import_extra_files</strong></p>
+<a class="ansibleOptionLink" href="#parameter-import_extra_files" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Import extra files flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-minimum_free_space_when_importing"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-minimum-free-space-when-importing"><strong>minimum_free_space_when_importing</strong></p>
+<a class="ansibleOptionLink" href="#parameter-minimum_free_space_when_importing" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Minimum free space when importing.</p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-paths_default_static"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-paths-default-static"><strong>paths_default_static</strong></p>
+<a class="ansibleOptionLink" href="#parameter-paths_default_static" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Paths default static.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-radarr_api_key"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-radarr-api-key"><strong>radarr_api_key</strong></p>
+<a class="ansibleOptionLink" href="#parameter-radarr_api_key" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>API key for Radarr authentication.</p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-radarr_url"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-radarr-url"><strong>radarr_url</strong></p>
+<a class="ansibleOptionLink" href="#parameter-radarr_url" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Full Radarr URL with protocol and port (e.g. `https://test.radarr.tv:7878`)</p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-recycle_bin"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-recycle-bin"><strong>recycle_bin</strong></p>
+<a class="ansibleOptionLink" href="#parameter-recycle_bin" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Bin path.</p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-recycle_bin_cleanup_days"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-recycle-bin-cleanup-days"><strong>recycle_bin_cleanup_days</strong></p>
+<a class="ansibleOptionLink" href="#parameter-recycle_bin_cleanup_days" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Recycle bin days.</p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-rescan_after_refresh"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-rescan-after-refresh"><strong>rescan_after_refresh</strong></p>
+<a class="ansibleOptionLink" href="#parameter-rescan_after_refresh" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Rescan after refresh.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;always&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;afterManual&quot;</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">&quot;never&quot;</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-script_import_path"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-script-import-path"><strong>script_import_path</strong></p>
+<a class="ansibleOptionLink" href="#parameter-script_import_path" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Import sctipt path.</p>
+<p class="ansible-option-line"><strong class="ansible-option-default-bold">Default:</strong> <code class="ansible-option-default docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-set_permissions_linux"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-set-permissions-linux"><strong>set_permissions_linux</strong></p>
+<a class="ansibleOptionLink" href="#parameter-set_permissions_linux" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Set linux permission flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-skip_free_space_check_when_importing"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-skip-free-space-check-when-importing"><strong>skip_free_space_check_when_importing</strong></p>
+<a class="ansibleOptionLink" href="#parameter-skip_free_space_check_when_importing" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Skip free space check when importing.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-use_script_import"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-parameter-use-script-import"><strong>use_script_import</strong></p>
+<a class="ansibleOptionLink" href="#parameter-use_script_import" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Use import script flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-default-bold docutils literal notranslate"><strong><span class="pre">false</span></strong></code> <span class="ansible-option-choices-default-mark">← (default)</span></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="notes">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>for authentication, you can set service_account_file using the c(RADARR_URL) env variable.</p></li>
+<li><p>for authentication, you can set service_account_contents using the c(RADARR_API_KEY) env variable.</p></li>
+</ul>
+</div>
+</section>
+<section id="examples">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Examples</a><a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="c1"># update media management</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update media management</span>
+<span class="w">  </span><span class="nt">devopsarr.radarr.radarr_media_management</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">chmod_folder</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;755&quot;</span>
+<span class="w">    </span><span class="nt">rescan_after_refresh</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;always&quot;</span>
+<span class="w">    </span><span class="nt">recycle_bin</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">    </span><span class="nt">file_date</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cinemas&quot;</span>
+<span class="w">    </span><span class="nt">extra_file_extensions</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;srt,info&quot;</span>
+<span class="w">    </span><span class="nt">download_propers_and_repacks</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;doNotPrefer&quot;</span>
+<span class="w">    </span><span class="nt">chown_group</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;arrs&quot;</span>
+<span class="w">    </span><span class="nt">minimum_free_space_when_importing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">    </span><span class="nt">recycle_bin_cleanup_days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="w">    </span><span class="nt">auto_unmonitor_previously_downloaded_movies</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">skip_free_space_check_when_importing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">set_permissions_linux</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">import_extra_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">enable_media_info</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">delete_empty_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">create_empty_movie_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">copy_using_hardlinks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">paths_default_static</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">auto_rename_folders</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</section>
+<section id="return-values">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Return Values</a><a class="headerlink" href="#return-values" title="Link to this heading"></a></h2>
+<p>Common return values are documented <a class="reference external" href="https://docs.ansible.com/ansible/devel/reference_appendices/common_return_values.html#common-return-values" title="(in Ansible vdevel)"><span class="xref std std-ref">here</span></a>, the following are the fields unique to this module:</p>
+<table class="longtable ansible-option-table docutils align-default" style="width: 100%">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-auto_rename_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-auto-rename-folders"><strong>auto_rename_folders</strong></p>
+<a class="ansibleOptionLink" href="#return-auto_rename_folders" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto rename folders.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-auto_unmonitor_previously_downloaded_movies"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-auto-unmonitor-previously-downloaded-movies"><strong>auto_unmonitor_previously_downloaded_movies</strong></p>
+<a class="ansibleOptionLink" href="#return-auto_unmonitor_previously_downloaded_movies" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto unmonitor previously downloaded movies.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-chmod_folder"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-chmod-folder"><strong>chmod_folder</strong></p>
+<a class="ansibleOptionLink" href="#return-chmod_folder" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Permission in linux format.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;755&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-chown_group"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-chown-group"><strong>chown_group</strong></p>
+<a class="ansibleOptionLink" href="#return-chown_group" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Linux group.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;arrs&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-copy_using_hardlinks"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-copy-using-hardlinks"><strong>copy_using_hardlinks</strong></p>
+<a class="ansibleOptionLink" href="#return-copy_using_hardlinks" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Copy using hardlinks.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-create_empty_movie_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-create-empty-movie-folders"><strong>create_empty_movie_folders</strong></p>
+<a class="ansibleOptionLink" href="#return-create_empty_movie_folders" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Create empty movie folder.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-delete_empty_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-delete-empty-folders"><strong>delete_empty_folders</strong></p>
+<a class="ansibleOptionLink" href="#return-delete_empty_folders" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Delete empty folders.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-download_propers_and_repacks"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-download-propers-and-repacks"><strong>download_propers_and_repacks</strong></p>
+<a class="ansibleOptionLink" href="#return-download_propers_and_repacks" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Download propers and repack.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;preferAndUpgrade&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-enable_media_info"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-enable-media-info"><strong>enable_media_info</strong></p>
+<a class="ansibleOptionLink" href="#return-enable_media_info" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Enable media info flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-extra_file_extensions"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-extra-file-extensions"><strong>extra_file_extensions</strong></p>
+<a class="ansibleOptionLink" href="#return-extra_file_extensions" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Comma separated list of extra files extension to be imported.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;srt,info&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-file_date"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-file-date"><strong>file_date</strong></p>
+<a class="ansibleOptionLink" href="#return-file_date" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>File date modification.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;localAirDate&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-id"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-id"><strong>id</strong></p>
+<a class="ansibleOptionLink" href="#return-id" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Media management ID.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">1</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-import_extra_files"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-import-extra-files"><strong>import_extra_files</strong></p>
+<a class="ansibleOptionLink" href="#return-import_extra_files" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Import extra files flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-minimum_free_space_when_importing"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-minimum-free-space-when-importing"><strong>minimum_free_space_when_importing</strong></p>
+<a class="ansibleOptionLink" href="#return-minimum_free_space_when_importing" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Minimum free space when importing.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">100</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-paths_default_static"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-paths-default-static"><strong>paths_default_static</strong></p>
+<a class="ansibleOptionLink" href="#return-paths_default_static" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Paths default static.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-recycle_bin"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-recycle-bin"><strong>recycle_bin</strong></p>
+<a class="ansibleOptionLink" href="#return-recycle_bin" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Bin path.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;/tmp&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-recycle_bin_cleanup_days"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-recycle-bin-cleanup-days"><strong>recycle_bin_cleanup_days</strong></p>
+<a class="ansibleOptionLink" href="#return-recycle_bin_cleanup_days" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Recycle bin days.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">7</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-rescan_after_refresh"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-rescan-after-refresh"><strong>rescan_after_refresh</strong></p>
+<a class="ansibleOptionLink" href="#return-rescan_after_refresh" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Rescan after refresh.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;afterManual&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-script_import_path"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-script-import-path"><strong>script_import_path</strong></p>
+<a class="ansibleOptionLink" href="#return-script_import_path" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Import sctipt path.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-set_permissions_linux"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-set-permissions-linux"><strong>set_permissions_linux</strong></p>
+<a class="ansibleOptionLink" href="#return-set_permissions_linux" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Set linux permission flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-skip_free_space_check_when_importing"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-skip-free-space-check-when-importing"><strong>skip_free_space_check_when_importing</strong></p>
+<a class="ansibleOptionLink" href="#return-skip_free_space_check_when_importing" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Skip free space check when importing.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-use_script_import"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-media-management-module-return-use-script-import"><strong>use_script_import</strong></p>
+<a class="ansibleOptionLink" href="#return-use_script_import" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Use import script flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">false</span></code></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+<section id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fuochi (&#64;Fuochi)</p></li>
+</ul>
+</section>
+<section id="collection-links">
+<h3>Collection links<a class="headerlink" href="#collection-links" title="Link to this heading"></a></h3>
+<ul class="ansible-links">
+<li><span><a aria-role="button" class="ansible-link reference external" href="https://github.com/devopsarr/ansible-collection-radarr/issues" rel="noopener external" target="_blank">Issue Tracker</a></span></li>
+<li><span><a aria-role="button" class="ansible-link reference external" href="https://github.com/devopsarr/ansible-collection-radarr" rel="noopener external" target="_blank">Repository (Sources)</a></span></li>
+<li><span><a aria-role="button" class="ansible-link reference external" href="https://github.com/devopsarr/ansible-collection-radarr/issues/new/choose" rel="noopener external" target="_blank">Report an issue</a></span></li>
+<li><span><a class="reference internal" href="index.html#communication-for-devopsarr-radarr"><span class="std std-ref">Communication</span></a></span></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          
+
+<footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="radarr_language_info_module.html" class="btn btn-neutral float-left" title="devopsarr.radarr.radarr_language_info module – Get information about Radarr language." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="radarr_media_management_info_module.html" class="btn btn-neutral float-right" title="devopsarr.radarr.radarr_media_management_info module – Get information about Radarr media management." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Ansible contributors.</p>
+  </div>
+
+  
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script><!-- extra footer elements for Ansible beyond RTD Sphinx Theme -->
+
+</body>
+</html>

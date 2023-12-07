@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>devopsarr.radarr.radarr_delay_profile module – Manages Radarr delay profile. &mdash; Ansible collections  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5707b69d" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/ansible.css?v=35b70fdb" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ansible.css?v=c5b67dd2" />
       <link rel="stylesheet" type="text/css" href="../../../_static/antsibull-minimal.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/rtd-ethical-ads.css?v=289b023e" />
 
@@ -24,8 +24,8 @@
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="devopsarr.radarr.radarr_remote_path_mapping module – Manages Radarr remote path mapping." href="radarr_remote_path_mapping_module.html" />
-    <link rel="prev" title="Devopsarr.Radarr" href="index.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
+    <link rel="next" title="devopsarr.radarr.radarr_delay_profile_info module – Get information about Radarr delay profile." href="radarr_delay_profile_info_module.html" />
+    <link rel="prev" title="devopsarr.radarr.radarr_custom_format_schema_info module – Get information about Radarr custom format schema." href="radarr_custom_format_schema_info_module.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
 
 
 
@@ -36,11 +36,9 @@
 
 <div class="DocSite-globalNav ansibleNav">
   <ul>
-    <li><a href="https://www.ansible.com/ansiblefest" target="_blank">AnsibleFest</a></li>
-    <li><a href="https://www.ansible.com/tower" target="_blank">Products</a></li>
-    <li><a href="https://www.ansible.com/community" target="_blank">Community</a></li>
-    <li><a href="https://www.ansible.com/webinars-training" target="_blank">Webinars & Training</a></li>
     <li><a href="https://www.ansible.com/blog" target="_blank">Blog</a></li>
+    <li><a href="https://forum.ansible.com/" target="_blank">Ansible community forum</a></li>
+    <li><a href="https://docs.ansible.com/" target="_blank">Documentation</a></li>
   </ul>
 </div>
 
@@ -141,7 +139,7 @@
 <h1>devopsarr.radarr.radarr_delay_profile module – Manages Radarr delay profile.<a class="headerlink" href="#devopsarr-radarr-radarr-delay-profile-module-manages-radarr-delay-profile" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/radarr/">devopsarr.radarr collection</a> (version 0.1.0).</p>
+<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/radarr/">devopsarr.radarr collection</a> (version 1.0.0).</p>
 <p>It is not included in <code class="docutils literal notranslate"><span class="pre">ansible-core</span></code>.
 To check whether it is installed, run <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">list</span></code>.</p>
 <p>To install it, use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">devopsarr.radarr</span></code>.</p>
@@ -173,6 +171,18 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </thead>
 <tbody>
 <tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-bypass_if_above_custom_format_score"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-bypass-if-above-custom-format-score"><strong>bypass_if_above_custom_format_score</strong></p>
+<a class="ansibleOptionLink" href="#parameter-bypass_if_above_custom_format_score" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Bypass if above custom format score flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-bypass_if_highest_quality"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-bypass-if-highest-quality"><strong>bypass_if_highest_quality</strong></p>
 <a class="ansibleOptionLink" href="#parameter-bypass_if_highest_quality" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -184,7 +194,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </ul>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-enable_torrent"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-enable-torrent"><strong>enable_torrent</strong></p>
 <a class="ansibleOptionLink" href="#parameter-enable_torrent" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -196,7 +206,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </ul>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-enable_usenet"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-enable-usenet"><strong>enable_usenet</strong></p>
 <a class="ansibleOptionLink" href="#parameter-enable_usenet" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -208,6 +218,14 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </ul>
 </div></td>
 </tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-minimum_custom_format_score"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-minimum-custom-format-score"><strong>minimum_custom_format_score</strong></p>
+<a class="ansibleOptionLink" href="#parameter-minimum_custom_format_score" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Minimum cutoff format score.</p>
+<p class="ansible-option-line"><strong class="ansible-option-default-bold">Default:</strong> <code class="ansible-option-default docutils literal notranslate"><span class="pre">0</span></code></p>
+</div></td>
+</tr>
 <tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-order"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-order"><strong>order</strong></p>
 <a class="ansibleOptionLink" href="#parameter-order" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
@@ -217,7 +235,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </tr>
 <tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-preferred_protocol"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-preferred-protocol"><strong>preferred_protocol</strong></p>
-<a class="ansibleOptionLink" href="#parameter-preferred_protocol" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
+<a class="ansibleOptionLink" href="#parameter-preferred_protocol" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
 </div></td>
 <td><div class="ansible-option-cell"><p>Preferred protocol.</p>
 <p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
@@ -245,7 +263,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <div class="ansibleOptionAnchor" id="parameter-state"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-parameter-state"><strong>state</strong></p>
 <a class="ansibleOptionLink" href="#parameter-state" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
 </div></td>
-<td><div class="ansible-option-cell"><p>Create or delete a delay profile.</p>
+<td><div class="ansible-option-cell"><p>Create or delete resource.</p>
 <p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
 <ul class="simple">
 <li><p><code class="ansible-option-default-bold docutils literal notranslate"><strong><span class="pre">&quot;present&quot;</span></strong></code> <span class="ansible-option-choices-default-mark">← (default)</span></p></li>
@@ -292,19 +310,21 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="c1"># Create a delay profile</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create a delay profile</span>
-<span class="w">  </span><span class="nt">devopsarr.radarr.delay_profile</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">devopsarr.radarr.radarr_delay_profile</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torrent</span>
 <span class="w">    </span><span class="nt">usenet_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">    </span><span class="nt">torrent_delay</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">minimum_custom_format_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
 <span class="w">    </span><span class="nt">enable_usenet</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">enable_torrent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">bypass_if_above_custom_format_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">bypass_if_highest_quality</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">2</span><span class="p p-Indicator">]</span>
 
 <span class="c1"># Delete a delay profile</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete a delay_profile</span>
-<span class="w">  </span><span class="nt">devopsarr.radarr.delay_profile</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">devopsarr.radarr.radarr_delay_profile</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">preferred_protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torrent</span>
 <span class="w">    </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="nv">2</span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">absent</span>
@@ -322,6 +342,15 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </thead>
 <tbody>
 <tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-bypass_if_above_custom_format_score"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-bypass-if-above-custom-format-score"><strong>bypass_if_above_custom_format_score</strong></p>
+<a class="ansibleOptionLink" href="#return-bypass_if_above_custom_format_score" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Bypass if above custom format score flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-bypass_if_highest_quality"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-bypass-if-highest-quality"><strong>bypass_if_highest_quality</strong></p>
 <a class="ansibleOptionLink" href="#return-bypass_if_highest_quality" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -330,7 +359,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-enable_torrent"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-enable-torrent"><strong>enable_torrent</strong></p>
 <a class="ansibleOptionLink" href="#return-enable_torrent" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -339,7 +368,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-enable_usenet"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-enable-usenet"><strong>enable_usenet</strong></p>
 <a class="ansibleOptionLink" href="#return-enable_usenet" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -348,13 +377,22 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-id"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-id"><strong>id</strong></p>
 <a class="ansibleOptionLink" href="#return-id" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
 </div></td>
 <td><div class="ansible-option-cell"><p>Delay Profile ID.</p>
 <p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">1</span></code></p>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-minimum_custom_format_score"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-delay-profile-module-return-minimum-custom-format-score"><strong>minimum_custom_format_score</strong></p>
+<a class="ansibleOptionLink" href="#return-minimum_custom_format_score" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Minimum cutoff format score.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">0</span></code></p>
 </div></td>
 </tr>
 <tr class="row-even"><td><div class="ansible-option-cell">
@@ -428,8 +466,8 @@ To check whether it is installed, run <code class="code docutils literal notrans
           
 
 <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Devopsarr.Radarr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="radarr_remote_path_mapping_module.html" class="btn btn-neutral float-right" title="devopsarr.radarr.radarr_remote_path_mapping module – Manages Radarr remote path mapping." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="radarr_custom_format_schema_info_module.html" class="btn btn-neutral float-left" title="devopsarr.radarr.radarr_custom_format_schema_info module – Get information about Radarr custom format schema." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="radarr_delay_profile_info_module.html" class="btn btn-neutral float-right" title="devopsarr.radarr.radarr_delay_profile_info module – Get information about Radarr delay profile." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
