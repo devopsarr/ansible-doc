@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devopsarr.Radarr &mdash; Ansible collections  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=5707b69d" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/ansible.css?v=35b70fdb" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/ansible.css?v=c5b67dd2" />
       <link rel="stylesheet" type="text/css" href="../../../_static/antsibull-minimal.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/rtd-ethical-ads.css?v=289b023e" />
 
@@ -24,7 +24,7 @@
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="devopsarr.radarr.radarr_delay_profile module – Manages Radarr delay profile." href="radarr_delay_profile_module.html" />
+    <link rel="next" title="devopsarr.radarr.radarr_auto_tag module – Manages Radarr auto tag." href="radarr_auto_tag_module.html" />
     <link rel="prev" title="devopsarr.prowlarr.prowlarr_tag module – Manages Prowlarr tag." href="../prowlarr/prowlarr_tag_module.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
 
 
@@ -36,11 +36,9 @@
 
 <div class="DocSite-globalNav ansibleNav">
   <ul>
-    <li><a href="https://www.ansible.com/ansiblefest" target="_blank">AnsibleFest</a></li>
-    <li><a href="https://www.ansible.com/tower" target="_blank">Products</a></li>
-    <li><a href="https://www.ansible.com/community" target="_blank">Community</a></li>
-    <li><a href="https://www.ansible.com/webinars-training" target="_blank">Webinars & Training</a></li>
     <li><a href="https://www.ansible.com/blog" target="_blank">Blog</a></li>
+    <li><a href="https://forum.ansible.com/" target="_blank">Ansible community forum</a></li>
+    <li><a href="https://docs.ansible.com/" target="_blank">Documentation</a></li>
   </ul>
 </div>
 
@@ -136,7 +134,7 @@
              
   <section id="devopsarr-radarr">
 <span id="plugins-in-devopsarr-radarr"></span><h1>Devopsarr.Radarr<a class="headerlink" href="#devopsarr-radarr" title="Link to this heading"></a></h1>
-<p>Collection version 0.1.0</p>
+<p>Collection version 1.0.0</p>
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
@@ -179,11 +177,55 @@
 <section id="modules">
 <h3>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h3>
 <ul class="simple">
+<li><p><a class="reference internal" href="radarr_auto_tag_module.html#ansible-collections-devopsarr-radarr-radarr-auto-tag-module"><span class="std std-ref">radarr_auto_tag module</span></a> – Manages Radarr auto tag.</p></li>
+<li><p><a class="reference internal" href="radarr_auto_tag_info_module.html#ansible-collections-devopsarr-radarr-radarr-auto-tag-info-module"><span class="std std-ref">radarr_auto_tag_info module</span></a> – Get information about Radarr auto tag.</p></li>
+<li><p><a class="reference internal" href="radarr_auto_tag_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-auto-tag-schema-info-module"><span class="std std-ref">radarr_auto_tag_schema_info module</span></a> – Get information about Radarr auto tag schema.</p></li>
+<li><p><a class="reference internal" href="radarr_custom_format_module.html#ansible-collections-devopsarr-radarr-radarr-custom-format-module"><span class="std std-ref">radarr_custom_format module</span></a> – Manages Radarr custom format.</p></li>
+<li><p><a class="reference internal" href="radarr_custom_format_info_module.html#ansible-collections-devopsarr-radarr-radarr-custom-format-info-module"><span class="std std-ref">radarr_custom_format_info module</span></a> – Get information about Radarr custom format.</p></li>
+<li><p><a class="reference internal" href="radarr_custom_format_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-custom-format-schema-info-module"><span class="std std-ref">radarr_custom_format_schema_info module</span></a> – Get information about Radarr custom format schema.</p></li>
 <li><p><a class="reference internal" href="radarr_delay_profile_module.html#ansible-collections-devopsarr-radarr-radarr-delay-profile-module"><span class="std std-ref">radarr_delay_profile module</span></a> – Manages Radarr delay profile.</p></li>
+<li><p><a class="reference internal" href="radarr_delay_profile_info_module.html#ansible-collections-devopsarr-radarr-radarr-delay-profile-info-module"><span class="std std-ref">radarr_delay_profile_info module</span></a> – Get information about Radarr delay profile.</p></li>
+<li><p><a class="reference internal" href="radarr_download_client_module.html#ansible-collections-devopsarr-radarr-radarr-download-client-module"><span class="std std-ref">radarr_download_client module</span></a> – Manages Radarr download client.</p></li>
+<li><p><a class="reference internal" href="radarr_download_client_config_module.html#ansible-collections-devopsarr-radarr-radarr-download-client-config-module"><span class="std std-ref">radarr_download_client_config module</span></a> – Manages Radarr download client config.</p></li>
+<li><p><a class="reference internal" href="radarr_download_client_config_info_module.html#ansible-collections-devopsarr-radarr-radarr-download-client-config-info-module"><span class="std std-ref">radarr_download_client_config_info module</span></a> – Get information about Radarr download client config.</p></li>
+<li><p><a class="reference internal" href="radarr_download_client_info_module.html#ansible-collections-devopsarr-radarr-radarr-download-client-info-module"><span class="std std-ref">radarr_download_client_info module</span></a> – Get information about Radarr download client.</p></li>
+<li><p><a class="reference internal" href="radarr_download_client_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-download-client-schema-info-module"><span class="std std-ref">radarr_download_client_schema_info module</span></a> – Get information about Radarr download client schema.</p></li>
+<li><p><a class="reference internal" href="radarr_import_list_module.html#ansible-collections-devopsarr-radarr-radarr-import-list-module"><span class="std std-ref">radarr_import_list module</span></a> – Manages Radarr import list.</p></li>
+<li><p><a class="reference internal" href="radarr_import_list_exclusion_module.html#ansible-collections-devopsarr-radarr-radarr-import-list-exclusion-module"><span class="std std-ref">radarr_import_list_exclusion module</span></a> – Manages Radarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="radarr_import_list_exclusion_info_module.html#ansible-collections-devopsarr-radarr-radarr-import-list-exclusion-info-module"><span class="std std-ref">radarr_import_list_exclusion_info module</span></a> – Manages Radarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="radarr_import_list_info_module.html#ansible-collections-devopsarr-radarr-radarr-import-list-info-module"><span class="std std-ref">radarr_import_list_info module</span></a> – Get information about Radarr import list.</p></li>
+<li><p><a class="reference internal" href="radarr_import_list_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-import-list-schema-info-module"><span class="std std-ref">radarr_import_list_schema_info module</span></a> – Get information about Radarr import list schema.</p></li>
+<li><p><a class="reference internal" href="radarr_indexer_module.html#ansible-collections-devopsarr-radarr-radarr-indexer-module"><span class="std std-ref">radarr_indexer module</span></a> – Manages Radarr indexer.</p></li>
+<li><p><a class="reference internal" href="radarr_indexer_config_module.html#ansible-collections-devopsarr-radarr-radarr-indexer-config-module"><span class="std std-ref">radarr_indexer_config module</span></a> – Manages Radarr indexer config.</p></li>
+<li><p><a class="reference internal" href="radarr_indexer_config_info_module.html#ansible-collections-devopsarr-radarr-radarr-indexer-config-info-module"><span class="std std-ref">radarr_indexer_config_info module</span></a> – Get information about Radarr indexer config.</p></li>
+<li><p><a class="reference internal" href="radarr_indexer_info_module.html#ansible-collections-devopsarr-radarr-radarr-indexer-info-module"><span class="std std-ref">radarr_indexer_info module</span></a> – Get information about Radarr indexer.</p></li>
+<li><p><a class="reference internal" href="radarr_indexer_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-indexer-schema-info-module"><span class="std std-ref">radarr_indexer_schema_info module</span></a> – Get information about Radarr indexer schema.</p></li>
+<li><p><a class="reference internal" href="radarr_language_info_module.html#ansible-collections-devopsarr-radarr-radarr-language-info-module"><span class="std std-ref">radarr_language_info module</span></a> – Get information about Radarr language.</p></li>
+<li><p><a class="reference internal" href="radarr_media_management_module.html#ansible-collections-devopsarr-radarr-radarr-media-management-module"><span class="std std-ref">radarr_media_management module</span></a> – Manages Radarr media management.</p></li>
+<li><p><a class="reference internal" href="radarr_media_management_info_module.html#ansible-collections-devopsarr-radarr-radarr-media-management-info-module"><span class="std std-ref">radarr_media_management_info module</span></a> – Get information about Radarr media management.</p></li>
+<li><p><a class="reference internal" href="radarr_metadata_module.html#ansible-collections-devopsarr-radarr-radarr-metadata-module"><span class="std std-ref">radarr_metadata module</span></a> – Manages Radarr metadata.</p></li>
+<li><p><a class="reference internal" href="radarr_metadata_info_module.html#ansible-collections-devopsarr-radarr-radarr-metadata-info-module"><span class="std std-ref">radarr_metadata_info module</span></a> – Get information about Radarr metadata.</p></li>
+<li><p><a class="reference internal" href="radarr_metadata_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-metadata-schema-info-module"><span class="std std-ref">radarr_metadata_schema_info module</span></a> – Get information about Radarr metadata schema.</p></li>
+<li><p><a class="reference internal" href="radarr_movie_module.html#ansible-collections-devopsarr-radarr-radarr-movie-module"><span class="std std-ref">radarr_movie module</span></a> – Manages Radarr movie.</p></li>
+<li><p><a class="reference internal" href="radarr_movie_info_module.html#ansible-collections-devopsarr-radarr-radarr-movie-info-module"><span class="std std-ref">radarr_movie_info module</span></a> – Get information about Radarr movie.</p></li>
+<li><p><a class="reference internal" href="radarr_naming_module.html#ansible-collections-devopsarr-radarr-radarr-naming-module"><span class="std std-ref">radarr_naming module</span></a> – Manages Radarr naming.</p></li>
+<li><p><a class="reference internal" href="radarr_naming_info_module.html#ansible-collections-devopsarr-radarr-radarr-naming-info-module"><span class="std std-ref">radarr_naming_info module</span></a> – Get information about Radarr naming.</p></li>
+<li><p><a class="reference internal" href="radarr_notification_module.html#ansible-collections-devopsarr-radarr-radarr-notification-module"><span class="std std-ref">radarr_notification module</span></a> – Manages Radarr notification.</p></li>
+<li><p><a class="reference internal" href="radarr_notification_info_module.html#ansible-collections-devopsarr-radarr-radarr-notification-info-module"><span class="std std-ref">radarr_notification_info module</span></a> – Get information about Radarr notification.</p></li>
+<li><p><a class="reference internal" href="radarr_notification_schema_info_module.html#ansible-collections-devopsarr-radarr-radarr-notification-schema-info-module"><span class="std std-ref">radarr_notification_schema_info module</span></a> – Get information about Radarr notification schema.</p></li>
+<li><p><a class="reference internal" href="radarr_quality_module.html#ansible-collections-devopsarr-radarr-radarr-quality-module"><span class="std std-ref">radarr_quality module</span></a> – Manages Radarr quality.</p></li>
+<li><p><a class="reference internal" href="radarr_quality_info_module.html#ansible-collections-devopsarr-radarr-radarr-quality-info-module"><span class="std std-ref">radarr_quality_info module</span></a> – Get information about Radarr quality.</p></li>
+<li><p><a class="reference internal" href="radarr_quality_profile_module.html#ansible-collections-devopsarr-radarr-radarr-quality-profile-module"><span class="std std-ref">radarr_quality_profile module</span></a> – Manages Radarr quality profile.</p></li>
+<li><p><a class="reference internal" href="radarr_quality_profile_info_module.html#ansible-collections-devopsarr-radarr-radarr-quality-profile-info-module"><span class="std std-ref">radarr_quality_profile_info module</span></a> – Get information about Radarr quality profile.</p></li>
+<li><p><a class="reference internal" href="radarr_release_profile_module.html#ansible-collections-devopsarr-radarr-radarr-release-profile-module"><span class="std std-ref">radarr_release_profile module</span></a> – Manages Radarr release profile.</p></li>
+<li><p><a class="reference internal" href="radarr_release_profile_info_module.html#ansible-collections-devopsarr-radarr-radarr-release-profile-info-module"><span class="std std-ref">radarr_release_profile_info module</span></a> – Get information about Radarr release profile.</p></li>
 <li><p><a class="reference internal" href="radarr_remote_path_mapping_module.html#ansible-collections-devopsarr-radarr-radarr-remote-path-mapping-module"><span class="std std-ref">radarr_remote_path_mapping module</span></a> – Manages Radarr remote path mapping.</p></li>
+<li><p><a class="reference internal" href="radarr_remote_path_mapping_info_module.html#ansible-collections-devopsarr-radarr-radarr-remote-path-mapping-info-module"><span class="std std-ref">radarr_remote_path_mapping_info module</span></a> – Get information about Radarr remote path mapping.</p></li>
 <li><p><a class="reference internal" href="radarr_root_folder_module.html#ansible-collections-devopsarr-radarr-radarr-root-folder-module"><span class="std std-ref">radarr_root_folder module</span></a> – Manages Radarr root folder.</p></li>
+<li><p><a class="reference internal" href="radarr_root_folder_info_module.html#ansible-collections-devopsarr-radarr-radarr-root-folder-info-module"><span class="std std-ref">radarr_root_folder_info module</span></a> – Get information about Radarr root folder.</p></li>
 <li><p><a class="reference internal" href="radarr_system_info_module.html#ansible-collections-devopsarr-radarr-radarr-system-info-module"><span class="std std-ref">radarr_system_info module</span></a> – Radarr system info module</p></li>
 <li><p><a class="reference internal" href="radarr_tag_module.html#ansible-collections-devopsarr-radarr-radarr-tag-module"><span class="std std-ref">radarr_tag module</span></a> – Manages Radarr tag.</p></li>
+<li><p><a class="reference internal" href="radarr_tag_info_module.html#ansible-collections-devopsarr-radarr-radarr-tag-info-module"><span class="std std-ref">radarr_tag_info module</span></a> – Get information about Radarr tag.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -202,7 +244,7 @@
 
 <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../prowlarr/prowlarr_tag_module.html" class="btn btn-neutral float-left" title="devopsarr.prowlarr.prowlarr_tag module – Manages Prowlarr tag." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="radarr_delay_profile_module.html" class="btn btn-neutral float-right" title="devopsarr.radarr.radarr_delay_profile module – Manages Radarr delay profile." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="radarr_auto_tag_module.html" class="btn btn-neutral float-right" title="devopsarr.radarr.radarr_auto_tag module – Manages Radarr auto tag." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
