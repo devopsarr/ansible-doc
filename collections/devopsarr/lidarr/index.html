@@ -24,7 +24,7 @@
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="devopsarr.lidarr.lidarr_system_info module – Lidarr system info module" href="lidarr_system_info_module.html" />
+    <link rel="next" title="devopsarr.lidarr.lidarr_artist module – Manages lidarr Artist." href="lidarr_artist_module.html" />
     <link rel="prev" title="Collections in the Devopsarr Namespace" href="../index.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
 
 
@@ -134,7 +134,7 @@
              
   <section id="devopsarr-lidarr">
 <span id="plugins-in-devopsarr-lidarr"></span><h1>Devopsarr.Lidarr<a class="headerlink" href="#devopsarr-lidarr" title="Link to this heading"></a></h1>
-<p>Collection version 0.1.0</p>
+<p>Collection version 1.0.0</p>
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
@@ -177,8 +177,54 @@
 <section id="modules">
 <h3>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h3>
 <ul class="simple">
+<li><p><a class="reference internal" href="lidarr_artist_module.html#ansible-collections-devopsarr-lidarr-lidarr-artist-module"><span class="std std-ref">lidarr_artist module</span></a> – Manages lidarr Artist.</p></li>
+<li><p><a class="reference internal" href="lidarr_artist_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-artist-info-module"><span class="std std-ref">lidarr_artist_info module</span></a> – Get information about Lidarr artist.</p></li>
+<li><p><a class="reference internal" href="lidarr_auto_tag_module.html#ansible-collections-devopsarr-lidarr-lidarr-auto-tag-module"><span class="std std-ref">lidarr_auto_tag module</span></a> – Manages Lidarr auto tag.</p></li>
+<li><p><a class="reference internal" href="lidarr_auto_tag_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-auto-tag-info-module"><span class="std std-ref">lidarr_auto_tag_info module</span></a> – Get information about Lidarr auto tag.</p></li>
+<li><p><a class="reference internal" href="lidarr_auto_tag_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-auto-tag-schema-info-module"><span class="std std-ref">lidarr_auto_tag_schema_info module</span></a> – Get information about Lidarr auto tag schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_custom_format_module.html#ansible-collections-devopsarr-lidarr-lidarr-custom-format-module"><span class="std std-ref">lidarr_custom_format module</span></a> – Manages Lidarr custom format.</p></li>
+<li><p><a class="reference internal" href="lidarr_custom_format_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-custom-format-info-module"><span class="std std-ref">lidarr_custom_format_info module</span></a> – Get information about Lidarr custom format.</p></li>
+<li><p><a class="reference internal" href="lidarr_custom_format_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-custom-format-schema-info-module"><span class="std std-ref">lidarr_custom_format_schema_info module</span></a> – Get information about Lidarr custom format schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_delay_profile_module.html#ansible-collections-devopsarr-lidarr-lidarr-delay-profile-module"><span class="std std-ref">lidarr_delay_profile module</span></a> – Manages Lidarr delay profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_delay_profile_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-delay-profile-info-module"><span class="std std-ref">lidarr_delay_profile_info module</span></a> – Get information about Lidarr delay profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_download_client_module.html#ansible-collections-devopsarr-lidarr-lidarr-download-client-module"><span class="std std-ref">lidarr_download_client module</span></a> – Manages Lidarr download client.</p></li>
+<li><p><a class="reference internal" href="lidarr_download_client_config_module.html#ansible-collections-devopsarr-lidarr-lidarr-download-client-config-module"><span class="std std-ref">lidarr_download_client_config module</span></a> – Manages Lidarr download client config.</p></li>
+<li><p><a class="reference internal" href="lidarr_download_client_config_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-download-client-config-info-module"><span class="std std-ref">lidarr_download_client_config_info module</span></a> – Get information about Lidarr download client config.</p></li>
+<li><p><a class="reference internal" href="lidarr_download_client_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-download-client-info-module"><span class="std std-ref">lidarr_download_client_info module</span></a> – Get information about Lidarr download client.</p></li>
+<li><p><a class="reference internal" href="lidarr_download_client_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-download-client-schema-info-module"><span class="std std-ref">lidarr_download_client_schema_info module</span></a> – Get information about Lidarr download client schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_import_list_module.html#ansible-collections-devopsarr-lidarr-lidarr-import-list-module"><span class="std std-ref">lidarr_import_list module</span></a> – Manages Lidarr import list.</p></li>
+<li><p><a class="reference internal" href="lidarr_import_list_exclusion_module.html#ansible-collections-devopsarr-lidarr-lidarr-import-list-exclusion-module"><span class="std std-ref">lidarr_import_list_exclusion module</span></a> – Manages Lidarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="lidarr_import_list_exclusion_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-import-list-exclusion-info-module"><span class="std std-ref">lidarr_import_list_exclusion_info module</span></a> – Manages Lidarr import list exclusion.</p></li>
+<li><p><a class="reference internal" href="lidarr_import_list_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-import-list-info-module"><span class="std std-ref">lidarr_import_list_info module</span></a> – Get information about Lidarr import list.</p></li>
+<li><p><a class="reference internal" href="lidarr_import_list_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-import-list-schema-info-module"><span class="std std-ref">lidarr_import_list_schema_info module</span></a> – Get information about Lidarr import list schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_indexer_module.html#ansible-collections-devopsarr-lidarr-lidarr-indexer-module"><span class="std std-ref">lidarr_indexer module</span></a> – Manages Lidarr indexer.</p></li>
+<li><p><a class="reference internal" href="lidarr_indexer_config_module.html#ansible-collections-devopsarr-lidarr-lidarr-indexer-config-module"><span class="std std-ref">lidarr_indexer_config module</span></a> – Manages Lidarr indexer config.</p></li>
+<li><p><a class="reference internal" href="lidarr_indexer_config_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-indexer-config-info-module"><span class="std std-ref">lidarr_indexer_config_info module</span></a> – Get information about Lidarr indexer config.</p></li>
+<li><p><a class="reference internal" href="lidarr_indexer_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-indexer-info-module"><span class="std std-ref">lidarr_indexer_info module</span></a> – Get information about Lidarr indexer.</p></li>
+<li><p><a class="reference internal" href="lidarr_indexer_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-indexer-schema-info-module"><span class="std std-ref">lidarr_indexer_schema_info module</span></a> – Get information about Lidarr indexer schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_media_management_module.html#ansible-collections-devopsarr-lidarr-lidarr-media-management-module"><span class="std std-ref">lidarr_media_management module</span></a> – Manages Lidarr media management.</p></li>
+<li><p><a class="reference internal" href="lidarr_media_management_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-media-management-info-module"><span class="std std-ref">lidarr_media_management_info module</span></a> – Get information about Lidarr media management.</p></li>
+<li><p><a class="reference internal" href="lidarr_metadata_module.html#ansible-collections-devopsarr-lidarr-lidarr-metadata-module"><span class="std std-ref">lidarr_metadata module</span></a> – Manages Lidarr metadata.</p></li>
+<li><p><a class="reference internal" href="lidarr_metadata_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-metadata-info-module"><span class="std std-ref">lidarr_metadata_info module</span></a> – Get information about Lidarr metadata.</p></li>
+<li><p><a class="reference internal" href="lidarr_metadata_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-metadata-schema-info-module"><span class="std std-ref">lidarr_metadata_schema_info module</span></a> – Get information about Lidarr metadata schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_naming_module.html#ansible-collections-devopsarr-lidarr-lidarr-naming-module"><span class="std std-ref">lidarr_naming module</span></a> – Manages Lidarr naming.</p></li>
+<li><p><a class="reference internal" href="lidarr_naming_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-naming-info-module"><span class="std std-ref">lidarr_naming_info module</span></a> – Get information about Lidarr naming.</p></li>
+<li><p><a class="reference internal" href="lidarr_notification_module.html#ansible-collections-devopsarr-lidarr-lidarr-notification-module"><span class="std std-ref">lidarr_notification module</span></a> – Manages Lidarr notification.</p></li>
+<li><p><a class="reference internal" href="lidarr_notification_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-notification-info-module"><span class="std std-ref">lidarr_notification_info module</span></a> – Get information about Lidarr notification.</p></li>
+<li><p><a class="reference internal" href="lidarr_notification_schema_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-notification-schema-info-module"><span class="std std-ref">lidarr_notification_schema_info module</span></a> – Get information about Lidarr notification schema.</p></li>
+<li><p><a class="reference internal" href="lidarr_quality_module.html#ansible-collections-devopsarr-lidarr-lidarr-quality-module"><span class="std std-ref">lidarr_quality module</span></a> – Manages Lidarr quality.</p></li>
+<li><p><a class="reference internal" href="lidarr_quality_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-quality-info-module"><span class="std std-ref">lidarr_quality_info module</span></a> – Get information about Lidarr quality.</p></li>
+<li><p><a class="reference internal" href="lidarr_quality_profile_module.html#ansible-collections-devopsarr-lidarr-lidarr-quality-profile-module"><span class="std std-ref">lidarr_quality_profile module</span></a> – Manages Lidarr quality profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_quality_profile_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-quality-profile-info-module"><span class="std std-ref">lidarr_quality_profile_info module</span></a> – Get information about Lidarr quality profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_release_profile_module.html#ansible-collections-devopsarr-lidarr-lidarr-release-profile-module"><span class="std std-ref">lidarr_release_profile module</span></a> – Manages Lidarr release profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_release_profile_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-release-profile-info-module"><span class="std std-ref">lidarr_release_profile_info module</span></a> – Get information about Lidarr release profile.</p></li>
+<li><p><a class="reference internal" href="lidarr_remote_path_mapping_module.html#ansible-collections-devopsarr-lidarr-lidarr-remote-path-mapping-module"><span class="std std-ref">lidarr_remote_path_mapping module</span></a> – Manages Lidarr remote path mapping.</p></li>
+<li><p><a class="reference internal" href="lidarr_remote_path_mapping_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-remote-path-mapping-info-module"><span class="std std-ref">lidarr_remote_path_mapping_info module</span></a> – Get information about Lidarr remote path mapping.</p></li>
+<li><p><a class="reference internal" href="lidarr_root_folder_module.html#ansible-collections-devopsarr-lidarr-lidarr-root-folder-module"><span class="std std-ref">lidarr_root_folder module</span></a> – Manages Lidarr root folder.</p></li>
+<li><p><a class="reference internal" href="lidarr_root_folder_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-root-folder-info-module"><span class="std std-ref">lidarr_root_folder_info module</span></a> – Get information about Lidarr root folder.</p></li>
 <li><p><a class="reference internal" href="lidarr_system_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-system-info-module"><span class="std std-ref">lidarr_system_info module</span></a> – Lidarr system info module</p></li>
 <li><p><a class="reference internal" href="lidarr_tag_module.html#ansible-collections-devopsarr-lidarr-lidarr-tag-module"><span class="std std-ref">lidarr_tag module</span></a> – Manages Lidarr tag.</p></li>
+<li><p><a class="reference internal" href="lidarr_tag_info_module.html#ansible-collections-devopsarr-lidarr-lidarr-tag-info-module"><span class="std std-ref">lidarr_tag_info module</span></a> – Get information about Lidarr tag.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -197,7 +243,7 @@
 
 <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="Collections in the Devopsarr Namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="lidarr_system_info_module.html" class="btn btn-neutral float-right" title="devopsarr.lidarr.lidarr_system_info module – Lidarr system info module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lidarr_artist_module.html" class="btn btn-neutral float-right" title="devopsarr.lidarr.lidarr_artist module – Manages lidarr Artist." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
