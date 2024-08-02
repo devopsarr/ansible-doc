@@ -2,7 +2,7 @@
 <html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="2.11.0" name="antsibull-docs" />
+<meta content="2.12.0" name="antsibull-docs" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>devopsarr.radarr.radarr_download_client_config module – Manages Radarr download client config. &mdash; Ansible collections  documentation</title>
@@ -139,7 +139,7 @@
 <h1>devopsarr.radarr.radarr_download_client_config module – Manages Radarr download client config.<a class="headerlink" href="#devopsarr-radarr-radarr-download-client-config-module-manages-radarr-download-client-config" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/radarr/">devopsarr.radarr collection</a> (version 1.0.0).</p>
+<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/radarr/">devopsarr.radarr collection</a> (version 1.1.0).</p>
 <p>It is not included in <code class="docutils literal notranslate"><span class="pre">ansible-core</span></code>.
 To check whether it is installed, run <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">list</span></code>.</p>
 <p>To install it, use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">devopsarr.radarr</span></code>.</p>
@@ -183,13 +183,25 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </div></td>
 </tr>
 <tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-auto_redownload_failed_from_interactive_search"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-parameter-auto-redownload-failed-from-interactive-search"><strong>auto_redownload_failed_from_interactive_search</strong></p>
+<a class="ansibleOptionLink" href="#parameter-auto_redownload_failed_from_interactive_search" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto redownload failed from interactive search.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-check_for_finished_download_interval"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-parameter-check-for-finished-download-interval"><strong>check_for_finished_download_interval</strong></p>
 <a class="ansibleOptionLink" href="#parameter-check_for_finished_download_interval" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span> / <span class="ansible-option-required">required</span></p>
 </div></td>
 <td><div class="ansible-option-cell"><p>Check for finished download interval.</p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-enable_completed_download_handling"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-parameter-enable-completed-download-handling"><strong>enable_completed_download_handling</strong></p>
 <a class="ansibleOptionLink" href="#parameter-enable_completed_download_handling" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span> / <span class="ansible-option-required">required</span></p>
 </div></td>
@@ -201,14 +213,14 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </ul>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-radarr_api_key"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-parameter-radarr-api-key"><strong>radarr_api_key</strong></p>
 <a class="ansibleOptionLink" href="#parameter-radarr_api_key" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
 </div></td>
 <td><div class="ansible-option-cell"><p>API key for Radarr authentication.</p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-radarr_url"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-parameter-radarr-url"><strong>radarr_url</strong></p>
 <a class="ansibleOptionLink" href="#parameter-radarr_url" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span> / <span class="ansible-option-required">required</span></p>
 </div></td>
@@ -235,6 +247,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update download client config</span>
 <span class="w">  </span><span class="nt">devopsarr.radarr.radarr_download_client_config</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">auto_redownload_failed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">auto_redownload_failed_from_interactive_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">    </span><span class="nt">enable_completed_download_handling</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
@@ -253,12 +266,21 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <div class="ansibleOptionAnchor" id="return-auto_redownload_failed"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-auto-redownload-failed"><strong>auto_redownload_failed</strong></p>
 <a class="ansibleOptionLink" href="#return-auto_redownload_failed" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
-<td><div class="ansible-option-cell"><p>Maximum size.</p>
+<td><div class="ansible-option-cell"><p>Auto redownload failed.</p>
 <p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
 </div></td>
 </tr>
 <tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-auto_redownload_failed_from_interactive_search"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-auto-redownload-failed-from-interactive-search"><strong>auto_redownload_failed_from_interactive_search</strong></p>
+<a class="ansibleOptionLink" href="#return-auto_redownload_failed_from_interactive_search" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Auto redownload failed from interactive search.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-check_for_finished_download_interval"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-check-for-finished-download-interval"><strong>check_for_finished_download_interval</strong></p>
 <a class="ansibleOptionLink" href="#return-check_for_finished_download_interval" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
 </div></td>
@@ -267,25 +289,25 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">1</span></code></p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-download_client_working_folders"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-download-client-working-folders"><strong>download_client_working_folders</strong></p>
 <a class="ansibleOptionLink" href="#return-download_client_working_folders" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
 </div></td>
-<td><div class="ansible-option-cell"><p>Retention.</p>
+<td><div class="ansible-option-cell"><p>Download client working folders.</p>
 <p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">&quot;_UNPACK_|_FAILED_&quot;</span></code></p>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-enable_completed_download_handling"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-enable-completed-download-handling"><strong>enable_completed_download_handling</strong></p>
 <a class="ansibleOptionLink" href="#return-enable_completed_download_handling" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
-<td><div class="ansible-option-cell"><p>Minimum age.</p>
+<td><div class="ansible-option-cell"><p>Enable completed download handling.</p>
 <p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
 <p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-id"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-radarr-radarr-download-client-config-module-return-id"><strong>id</strong></p>
 <a class="ansibleOptionLink" href="#return-id" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">integer</span></p>
 </div></td>
