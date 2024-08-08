@@ -24,7 +24,7 @@
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="devopsarr.prowlarr.prowlarr_system_info module – Prowlarr system info module" href="prowlarr_system_info_module.html" />
+    <link rel="next" title="devopsarr.prowlarr.prowlarr_application module – Manages Prowlarr application." href="prowlarr_application_module.html" />
     <link rel="prev" title="devopsarr.lidarr.lidarr_tag_info module – Get information about Lidarr tag." href="../lidarr/lidarr_tag_info_module.html" /><!-- extra head elements for Ansible beyond RTD Sphinx Theme -->
 
 
@@ -134,7 +134,7 @@
              
   <section id="devopsarr-prowlarr">
 <span id="plugins-in-devopsarr-prowlarr"></span><h1>Devopsarr.Prowlarr<a class="headerlink" href="#devopsarr-prowlarr" title="Link to this heading"></a></h1>
-<p>Collection version 0.1.0</p>
+<p>Collection version 1.0.0</p>
 <nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#description" id="id1">Description</a></p></li>
@@ -177,8 +177,26 @@
 <section id="modules">
 <h3>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h3>
 <ul class="simple">
+<li><p><a class="reference internal" href="prowlarr_application_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-application-module"><span class="std std-ref">prowlarr_application module</span></a> – Manages Prowlarr application.</p></li>
+<li><p><a class="reference internal" href="prowlarr_application_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-application-info-module"><span class="std std-ref">prowlarr_application_info module</span></a> – Get information about Prowlarr application.</p></li>
+<li><p><a class="reference internal" href="prowlarr_application_schema_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-application-schema-info-module"><span class="std std-ref">prowlarr_application_schema_info module</span></a> – Get information about Prowlarr application schema.</p></li>
+<li><p><a class="reference internal" href="prowlarr_download_client_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-download-client-module"><span class="std std-ref">prowlarr_download_client module</span></a> – Manages Prowlarr download client.</p></li>
+<li><p><a class="reference internal" href="prowlarr_download_client_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-download-client-info-module"><span class="std std-ref">prowlarr_download_client_info module</span></a> – Get information about Prowlarr download client.</p></li>
+<li><p><a class="reference internal" href="prowlarr_download_client_schema_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-download-client-schema-info-module"><span class="std std-ref">prowlarr_download_client_schema_info module</span></a> – Get information about Prowlarr download client schema.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module"><span class="std std-ref">prowlarr_indexer module</span></a> – Manages Prowlarr indexer.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-info-module"><span class="std std-ref">prowlarr_indexer_info module</span></a> – Get information about Prowlarr indexer.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_proxy_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-proxy-module"><span class="std std-ref">prowlarr_indexer_proxy module</span></a> – Manages Prowlarr indexer proxy.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_proxy_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-proxy-info-module"><span class="std std-ref">prowlarr_indexer_proxy_info module</span></a> – Get information about Prowlarr indexer proxy.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_proxy_schema_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-proxy-schema-info-module"><span class="std std-ref">prowlarr_indexer_proxy_schema_info module</span></a> – Get information about Prowlarr indexer proxy schema.</p></li>
+<li><p><a class="reference internal" href="prowlarr_indexer_schema_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-indexer-schema-info-module"><span class="std std-ref">prowlarr_indexer_schema_info module</span></a> – Get information about Prowlarr indexer schema.</p></li>
+<li><p><a class="reference internal" href="prowlarr_notification_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-notification-module"><span class="std std-ref">prowlarr_notification module</span></a> – Manages Prowlarr notification.</p></li>
+<li><p><a class="reference internal" href="prowlarr_notification_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-notification-info-module"><span class="std std-ref">prowlarr_notification_info module</span></a> – Get information about Prowlarr notification.</p></li>
+<li><p><a class="reference internal" href="prowlarr_notification_schema_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-notification-schema-info-module"><span class="std std-ref">prowlarr_notification_schema_info module</span></a> – Get information about Prowlarr notification schema.</p></li>
+<li><p><a class="reference internal" href="prowlarr_sync_profile_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-sync-profile-module"><span class="std std-ref">prowlarr_sync_profile module</span></a> – Manages Prowlarr sync profile.</p></li>
+<li><p><a class="reference internal" href="prowlarr_sync_profile_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-sync-profile-info-module"><span class="std std-ref">prowlarr_sync_profile_info module</span></a> – Get information about Prowlarr sync profile.</p></li>
 <li><p><a class="reference internal" href="prowlarr_system_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-system-info-module"><span class="std std-ref">prowlarr_system_info module</span></a> – Prowlarr system info module</p></li>
 <li><p><a class="reference internal" href="prowlarr_tag_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-tag-module"><span class="std std-ref">prowlarr_tag module</span></a> – Manages Prowlarr tag.</p></li>
+<li><p><a class="reference internal" href="prowlarr_tag_info_module.html#ansible-collections-devopsarr-prowlarr-prowlarr-tag-info-module"><span class="std std-ref">prowlarr_tag_info module</span></a> – Get information about Prowlarr tag.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -197,7 +215,7 @@
 
 <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../lidarr/lidarr_tag_info_module.html" class="btn btn-neutral float-left" title="devopsarr.lidarr.lidarr_tag_info module – Get information about Lidarr tag." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="prowlarr_system_info_module.html" class="btn btn-neutral float-right" title="devopsarr.prowlarr.prowlarr_system_info module – Prowlarr system info module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="prowlarr_application_module.html" class="btn btn-neutral float-right" title="devopsarr.prowlarr.prowlarr_application module – Manages Prowlarr application." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
