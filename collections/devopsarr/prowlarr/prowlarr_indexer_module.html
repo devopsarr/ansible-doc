@@ -137,7 +137,7 @@
 <h1>devopsarr.prowlarr.prowlarr_indexer module – Manages Prowlarr indexer.<a class="headerlink" href="#devopsarr-prowlarr-prowlarr-indexer-module-manages-prowlarr-indexer" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/prowlarr/">devopsarr.prowlarr collection</a> (version 1.0.0).</p>
+<p>This module is part of the <a class="reference external" href="https://galaxy.ansible.com/ui/repo/published/devopsarr/prowlarr/">devopsarr.prowlarr collection</a> (version 1.0.1).</p>
 <p>It is not included in <code class="docutils literal notranslate"><span class="pre">ansible-core</span></code>.
 To check whether it is installed, run <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">list</span></code>.</p>
 <p>To install it, use: <code class="code docutils literal notranslate"><span class="pre">ansible-galaxy</span> <span class="pre">collection</span> <span class="pre">install</span> <span class="pre">devopsarr.prowlarr</span></code>.</p>
@@ -264,6 +264,18 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </div></td>
 </tr>
 <tr class="row-even"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="parameter-redirect"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-parameter-redirect"><strong>redirect</strong></p>
+<a class="ansibleOptionLink" href="#parameter-redirect" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Redirect flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-choices">Choices:</strong></p>
+<ul class="simple">
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="ansible-option-choices-entry docutils literal notranslate"><span class="pre">true</span></code></p></li>
+</ul>
+</div></td>
+</tr>
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-state"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-parameter-state"><strong>state</strong></p>
 <a class="ansibleOptionLink" href="#parameter-state" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">string</span></p>
 </div></td>
@@ -275,7 +287,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </ul>
 </div></td>
 </tr>
-<tr class="row-odd"><td><div class="ansible-option-cell">
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-tags"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-parameter-tags"><strong>tags</strong></p>
 <a class="ansibleOptionLink" href="#parameter-tags" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">list</span> / <span class="ansible-option-elements">elements=integer</span></p>
 </div></td>
@@ -283,7 +295,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <p class="ansible-option-line"><strong class="ansible-option-default-bold">Default:</strong> <code class="ansible-option-default docutils literal notranslate"><span class="pre">[]</span></code></p>
 </div></td>
 </tr>
-<tr class="row-even"><td><div class="ansible-option-cell">
+<tr class="row-odd"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="parameter-update_secrets"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-parameter-update-secrets"><strong>update_secrets</strong></p>
 <a class="ansibleOptionLink" href="#parameter-update_secrets" title="Permalink to this option"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
 </div></td>
@@ -320,6 +332,7 @@ To check whether it is installed, run <code class="code docutils literal notrans
 <span class="w">    </span><span class="nt">config_contract</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NewznabSettings&quot;</span>
 <span class="w">    </span><span class="nt">implementation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Newznab&quot;</span>
 <span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;usenet&quot;</span>
+<span class="w">    </span><span class="nt">redirect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">fields</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;baseUrl&quot;</span>
 <span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://lolo.sickbeard.com&quot;</span>
@@ -428,6 +441,15 @@ To check whether it is installed, run <code class="code docutils literal notrans
 </div></td>
 </tr>
 <tr class="row-odd"><td><div class="ansible-option-cell">
+<div class="ansibleOptionAnchor" id="return-redirect"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-return-redirect"><strong>redirect</strong></p>
+<a class="ansibleOptionLink" href="#return-redirect" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">boolean</span></p>
+</div></td>
+<td><div class="ansible-option-cell"><p>Redirect flag.</p>
+<p class="ansible-option-line"><strong class="ansible-option-returned-bold">Returned:</strong> always</p>
+<p class="ansible-option-line ansible-option-sample"><strong class="ansible-option-sample-bold">Sample:</strong> <code class="ansible-option-sample docutils literal notranslate"><span class="pre">true</span></code></p>
+</div></td>
+</tr>
+<tr class="row-even"><td><div class="ansible-option-cell">
 <div class="ansibleOptionAnchor" id="return-tags"></div><p class="ansible-option-title" id="ansible-collections-devopsarr-prowlarr-prowlarr-indexer-module-return-tags"><strong>tags</strong></p>
 <a class="ansibleOptionLink" href="#return-tags" title="Permalink to this return value"></a><p class="ansible-option-type-line"><span class="ansible-option-type">list</span> / <span class="ansible-option-elements">elements=integer</span></p>
 </div></td>
